@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Stamon",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#operator"
+    },
+    {
+      "include": "#identifier"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.stamon",
+          "begin": "\\/\\/",
+          "end": "\n|$",
+          "patterns": []
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.stamon",
+          "match": "\\b(if|else|while|for|in|return|break|continue|sfn)\\b"
+        },
+        {
+          "name": "keyword.control.conditional.stamon",
+          "match": "\\b(if|else)\\b"
+        },
+        {
+          "name": "keyword.control.import.stamon",
+          "match": "\\b(import)\\b"
+        },
+        {
+          "name": "constant.language.stamon",
+          "match": "\\b(true|false|null|(what\\x20can\\x20i\\x20say)|(jvav)|(CLimber-Rong))\\b"
+        },
+        {
+          "name": "keyword.other.stamon",
+          "match": "\\b(class|extends|def|func)\\b"
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.stamon",
+          "match": "\\b([0-9]+)\\b"
+        },
+        {
+          "name": "constant.numeric.float.stamon",
+          "match": "\\b([0-9]+)(\\.)([0-9]+)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.stamon",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.stamon",
+          "match": "(\\\\(\\\\|0|n|t|\\\"|x[0-9a-fA-F][0-9a-fA-F]))"
+        }
+      ]
+    },
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.word.stamon",
+          "match": "\\b(new)\\b"
+        },
+        {
+          "name": "punctuation.definition.keyword.stamon",
+          "match": "(\\(|\\)|\\{|\\}|\\[|\\]|,|;|:|\\.)"
+        },
+        {
+          "name": "keyword.operator.assignment.stamon",
+          "match": "(=|\\+=|-=|\\/=|\\*=|%=|&=|\\^=|(\\|=)|(<<=)|(>>=))"
+        },
+        {
+          "name": "keyword.operator.arithmetic.stamon",
+          "match": "(\\+|-|\\*|\\/|%)"
+        },
+        {
+          "name": "keyword.operator.bitwise.stamon",
+          "match": "((\\|)|&|\\^|<<|>>|~)"
+        },
+        {
+          "name": "keyword.operator.logical.stamon",
+          "match": "((\\|\\|)|&&|!)"
+        },
+        {
+          "name": "keyword.operator.stamon",
+          "match": "(==|!=|<|>|(<=)|(>=))"
+        }
+      ]
+    },
+    "identifier": {
+      "patterns": [
+        {
+          "name": "variable.other.stamon",
+          "match": "\\b([A-Za-z_]([A-Za-z0-9_]*))\\b"
+        },
+        {
+          "name": "variable.other.constant.stamon",
+          "match": "\\b(self)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.stamon"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Stamon2",
+  "displayName": "stamon2-highlight",
+  "description": "An object-oriented weakly typed programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "stamon",
+      "aliases": ["Stamon", "stamon"],
+      "extensions": [".st"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "stamon",
+      "scopeName": "source.stamon",
+      "path": "./syntaxes/stamon.tmLanguage.json"
+    }]
+  }
+}
