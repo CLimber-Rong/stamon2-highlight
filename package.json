@@ -1,8 +1,8 @@
 {
-  "name": "Stamon2",
+  "name": "stamon2",
   "displayName": "stamon2-highlight",
   "description": "An object-oriented weakly typed programming language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {},
   "engines": {
     "vscode": "^1.54.0"

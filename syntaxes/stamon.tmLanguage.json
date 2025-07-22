@@ -52,7 +52,7 @@
         },
         {
           "name": "keyword.other.stamon",
-          "match": "\\b(class|extends|def|func)\\b"
+          "match": "\\b(class|extends|def|func|extern)\\b"
         }
       ]
     },
