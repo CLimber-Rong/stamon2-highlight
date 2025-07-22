@@ -1,5 +1,6 @@
 {
   "name": "stamon2",
+  "publisher": "CLimber-Rong",
   "displayName": "stamon2-highlight",
   "description": "An object-oriented weakly typed programming language",
   "version": "0.0.2",
